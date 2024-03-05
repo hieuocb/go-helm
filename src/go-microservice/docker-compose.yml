@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: go-helm-ms:latest
+    ports:
+      - "9090:9090"
+    restart: always
+    networks:
+      - web
+
+networks:
+  web:
